@@ -91,3 +91,47 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Cards */
+
+$physics: rgb(190,120,160);
+
+.card {
+    margin: 0;
+    padding: 30px;
+    background-color: lighten($physics,20%);
+    border-top: 1em solid $physics;
+}
+
+.nation {
+    background-color: lighten($physics, 30%);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    
+    color: $physics;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.year {
+    background-color: $physics;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.discipline {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    
+    color: $physics;
+    text-align: center;
+    vertical-align: bottom;
+}
