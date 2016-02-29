@@ -4,6 +4,9 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700);
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -93,10 +96,11 @@ body {
 }
 
 /* Cards */
-
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 $physics: rgb(190,120,160);
 
 .card {
+    font-family: 'Noto Serif', 'Times New Roman', serif !important;
     margin: 0;
     padding: 30px;
     background-color: lighten($physics,20%);
@@ -106,32 +110,58 @@ $physics: rgb(190,120,160);
 .nation {
     background-color: lighten($physics, 30%);
     padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+
     
     color: $physics;
     text-align: center;
     vertical-align: middle;
+    border-bottom: 0.25em solid $physics;    
 }
 
 .year {
-    background-color: $physics;
+    background-color: lighten($physics, 10%);
     padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+
+
     
     color: #fff;
     text-align: center;
     vertical-align: middle;
+    border-bottom: 0.25em solid $physics;
 }
 
 .discipline {
     background-color: #fff;
     padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+
+    
+    color: $physics;
+    text-align: center;
+
+    border-bottom: 0.25em solid $physics;
+    
+}
+
+.fullname {
+    background-color: #fff;
+    padding: 10px;
+
+    border-bottom: 0.25em solid $physics;
     
     color: $physics;
     text-align: center;
     vertical-align: bottom;
+}
+
+.portrait {
+    background-color: #fff;
+    padding: 10px;
+    width: auto;
+    border-bottom: 0.25em solid $physics;
+    }
+
+
+.divider{
+    border-color: $physics;
+    
 }

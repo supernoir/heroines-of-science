@@ -46,19 +46,32 @@
       <div class="card">
           <div class="row">
               <div class="col-md-6">
-                  <img src="/images/portraits/portrait_maria-goeppert-mayer.jpg" alt="..." class="img-rounded">
+                <img src="/images/portraits/portrait_maria-goeppert-mayer.jpg" class="portrait" alt="..." class="img-rounded">
               </div>
               <div class="col-md-6">
+                  <div class="fullname">
+                      <h1>{{card.first_name}}<br><strong>{{card.last_name}}</strong></h1>
+                  </div>
+              </div>
+    
+          </div>
+          <hr class="divider">
+          <div class="row">              
+              <div class="col-md-4">
                   <div class="nation">
                       <h3>{{card.nation}}</h3>
                   </div>
+              </div>
+              <div class="col-md-4">
                   <div class="year">
                       <h3>{{card.year}}</h3>
                   </div>
+             </div>
+             <div class="col-md-4">
                   <div class="discipline">
-                      <p class="lead"><span class="glyphicon glyphicon-apple"></span> {{card.discipline}}</p>
+                      <h3><span class="glyphicon glyphicon-apple"></span> {{card.discipline}}</h3>
                   </div>
-              </div>
+             </div>
           </div>
       </div>
 
