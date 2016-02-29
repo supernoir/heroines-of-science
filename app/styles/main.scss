@@ -98,8 +98,21 @@ body {
 /* Cards */
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 $physics: rgb(190,120,160);
+$filter: rgb(50,50,50);
 
-.card {
+
+
+.heroines_filter {
+    font-family: 'Noto Sans', 'Times New Roman', serif !important;
+    margin: 0 0 20px 0;
+    padding: 30px;
+    background-color: lighten($filter,70%);
+    border-top: 1em solid lighten($filter,50%);
+    color: $filter;
+}
+
+
+.heroines_card {
     font-family: 'Noto Serif', 'Times New Roman', serif !important;
     margin: 0;
     padding: 30px;
@@ -160,6 +173,16 @@ $physics: rgb(190,120,160);
     border-bottom: 0.25em solid $physics;
     }
 
+.desc {
+    background-color: #fff;
+    padding: 10px;
+
+    border-bottom: 0.25em solid $physics;
+    
+    color: $physics;
+    text-align: center;
+    vertical-align: bottom;
+}
 
 .divider{
     border-color: $physics;

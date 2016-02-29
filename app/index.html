@@ -35,15 +35,27 @@
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-        <h3 class="text-muted">heroines of science</h3>
+        <h3 class="text-muted">Heroines of Science</h3>
       </div>
 
+      <!--
       <div class="jumbotron">
         <h1>{{hello}}</h1>
         <p class="lead">Always a pleasure scaffolding your apps.</p>
       </div>
+      -->
       
-      <div class="card">
+      <div class="heroines_filter">
+          <div class="row">
+              <label class="control-label">Discipline</label>
+              <select class="form-control">
+                  <option ng-repeat="option in disciplines"><b>{{option}}</option>
+              </select>
+          </div>
+      </div>
+      
+      <div class="heroines_card">
+          <!-- PORTRAIT & NAME -->
           <div class="row">
               <div class="col-md-6">
                 <img src="/images/portraits/portrait_maria-goeppert-mayer.jpg" class="portrait" alt="..." class="img-rounded">
@@ -52,10 +64,19 @@
                   <div class="fullname">
                       <h1>{{card.first_name}}<br><strong>{{card.last_name}}</strong></h1>
                   </div>
+                  <hr class="divider">
+                  
+                  <div class="col-md-6">
+                  <div class="desc">
+                      <p class="card-desc">{{card.desc}}</p>
+                  </div>
               </div>
-    
+              </div>
           </div>
+          
           <hr class="divider">
+          
+          <!-- SPECS -->
           <div class="row">              
               <div class="col-md-4">
                   <div class="nation">
@@ -73,6 +94,20 @@
                   </div>
              </div>
           </div>
+          
+          <hr class="divider">
+          
+          <!-- DESC -->
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="desc">
+                      <p class="card-desc">{{card.desc}}</p>
+                  </div>
+              </div>
+          </div>
+          
+          <hr class="divider">
+          
       </div>
 
       <div class="row marketing">
