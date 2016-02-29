@@ -31,9 +31,8 @@
     <div class="container" ng-controller="mainController">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
+          <li class="active"><a href="#">Laureate Portraits</a></li>
           <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
         </ul>
         <h3 class="text-muted">Heroines of Science</h3>
       </div>
@@ -47,10 +46,25 @@
       
       <div class="heroines_filter">
           <div class="row">
+              <!--<p class="lead text-center">Female Noble Laureates <span class="text-muted">filtered by</span></p>-->
+              <div class="col-md-3">
+              <label class="control-label">Nation</label>
+              <select class="form-control">
+                  <option ng-repeat="n in nations"><b>{{n}}</option>
+              </select>
+              </div>
+              <div class="col-md-3">
+              <label class="control-label">Year</label>
+              <select class="form-control">
+                  <option ng-repeat="y in years"><b>{{y}}</option>
+              </select>
+              </div>
+              <div class="col-md-3">
               <label class="control-label">Discipline</label>
               <select class="form-control">
-                  <option ng-repeat="option in disciplines"><b>{{option}}</option>
+                  <option ng-repeat="d in disciplines"><b>{{d}}</option>
               </select>
+              </div>
           </div>
       </div>
       
@@ -119,7 +133,7 @@
       </div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+        <p align="center"><a href="https://github.com/supernoir/heroines-of-science"><span class="glyphicon glyphicon-heart"></span></a></p>
       </div>
     </div>
     

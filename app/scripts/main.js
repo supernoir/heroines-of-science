@@ -11,6 +11,21 @@ angular.module('heroinesApp', [])
       'discipline':'Physics', 
       'desc':'The Fox jumps over the Nobel Laureate and he turns green.',      
   };
+
+  $scope.nations = {
+    'option_1': 'USA',
+    'option_2': 'Germany',
+    'option_3': 'Birma',
+    'option_4': 'Israel',
+    'option_5': 'France',
+    'option_6': 'India'
+  };
+
+  $scope.years = {
+    'option_1': '1901',
+    'option_2': '1903',
+    'option_3': '1911',
+  };
   
   $scope.disciplines = {
     'option_1': 'Economics',
