@@ -6,6 +6,24 @@
 
 var express  = require('express');
 var app = express();
+var cors = require("cors");
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+// -----------------------------------------------------------------------------  
+//  CORS
+// -----------------------------------------------------------------------------
+
+app.use(function (request, response, next) {
+    response.header("Access-Control-Allow-Origin", "*");
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    response.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");  
+  next();     
+});
 
 // -----------------------------------------------------------------------------  
 //  USING NANO
@@ -16,40 +34,23 @@ var nano = require('nano')('http://localhost:5984')
   ;
 var heroines = nano.db.use('heroines');
 
-
-
 // -----------------------------------------------------------------------------  
 //  REST
 // -----------------------------------------------------------------------------
 
-/*
-nano.db.get('heroines', function(err, body) {
-  if (!err) {
-    console.log(body);
-  }
-});
-*/
-
-/*heroines.list(params, function(error,body,headers) {
-  console.log(body);
-  console.log(headers.statusCode)
-});*/
-
-app.get('/heroines', function(request, response) {
-    heroines.list(params, function(err, body, headers) {
-        if (!err) {
-            console.log("Everything is OK -- " + headers.statusCode)
-            body.rows.forEach(function(doc) {
-                console.log(doc.doc);
+console.log('GET Heroines');
+app.get('/heroines', function(request, response, next) {
+        heroines.list(params, function(err,body) {
+           body.rows.forEach(function(doc) {
+                    response.json(doc);
             });
-        }
-    });
+        });
 });
 
 // -----------------------------------------------------------------------------  
 //  LISTENING
 // -----------------------------------------------------------------------------
 
-var port = process.env.PORT || 6000;
+var port = process.env.PORT || 9001;
 app.listen(port);
 console.log("App listening on port " + port);

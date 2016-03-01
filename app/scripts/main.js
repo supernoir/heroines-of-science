@@ -1,6 +1,18 @@
 angular.module('heroinesApp', [])
 
-.controller('mainController', function($scope) {
+.controller('mainController', ['$scope','$http','$location', function($scope, $http, $location) {
+
+  $http({
+  method: 'GET',
+  url: 'http://localhost:9001/heroines'
+}).then(function successCallback(response) {
+       console.log(response.status, "GET Heroines: " + response.statusText);
+       console.log(response.data);
+        $scope.yay = response.data.doc;
+  }, function errorCallback(response) {
+      console.error(response.status, response.statusText);
+  });
+
   $scope.hello = "Hello World!";
   
   $scope.card = {
@@ -36,4 +48,4 @@ angular.module('heroinesApp', [])
     'option_6': 'Medicine'
   };
   
-})
+}]);
