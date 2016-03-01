@@ -115,7 +115,7 @@ $filter: rgb(50,50,50);
 
 .heroines_card {
     font-family: 'Noto Serif', 'Times New Roman', serif !important;
-    margin: 0 10px 0 0;
+    margin: 5px;
     padding: 10px;
     background-color: lighten($physics,20%);
     border-top: 1em solid $physics;
@@ -126,6 +126,7 @@ $filter: rgb(50,50,50);
 .award {
     background-color: lighten($physics,10%);
     padding: 5px;
+    margin: 5px 0;
 
     color: #fff;
     text-align: center;
@@ -148,6 +149,7 @@ $filter: rgb(50,50,50);
 
 .portrait {
     padding: 5px;
+    margin: 5px 0;
     border-bottom: 0.25em solid $physics;
     background-color: #fff;
     }

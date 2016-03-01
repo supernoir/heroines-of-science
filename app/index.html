@@ -35,6 +35,7 @@
           <li><a href="#">About</a></li>
         </ul>
         <h3 class="text-muted">Heroines of Science</h3>
+
       </div>
 
       
@@ -62,36 +63,38 @@
           </div>
       </div>
       
-      <div class="heroines_card col-sm-4">
+<div class="container">
+      
+      <div class="heroines_card col-sm-4" ng-repeat="p in profile">
           <!-- PORTRAIT & NAME -->
           <div class="row">
               <div class="col-sm-12">
-                <img src="/images/portraits/portrait_maria-goeppert-mayer.jpg" class="portrait col-sm-12" alt="...">
+                <img src="/images/portraits/portrait_{{p.doc.name}}.jpg" class="portrait col-sm-12" alt="...">
               </div>
           </div>
           <div class="row">
               <div class="col-sm-12">
                   <div class="fullname">
-                      <h4>{{card.first_name}}<br><strong>{{card.last_name}}</strong></h4>
+                      <h4>{{p.doc.first_name}}<br><strong>{{p.doc.last_name}}</strong></h4>
                   </div>
               </div>
           </div>
           <div class="row">                  
             <div class="col-sm-12">
                   <div class="desc">
-                      <p class="card-desc">{{card.desc}}</p>
+                      <p class="card-desc">{{p.doc.desc}}</p>
                   </div>
               </div>
               </div>
           <div class="row">
              <div class="col-sm-12">
                   <div class="award">
-                      <p><span class="glyphicon glyphicon-apple"></span> {{card.discipline}} | {{card.year}} | {{card.nation}}</p>
+                      <p><span class="glyphicon glyphicon-apple"></span> {{p.doc.discipline}} | {{p.doc.year}} | {{p.doc.nation}}</p>
                   </div>
              </div>
           </div>
-    </div>
-
+    </div>    
+</div>    
 
       <div class="row marketing">
         <div class="col-lg-6">

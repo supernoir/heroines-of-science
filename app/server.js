@@ -40,12 +40,19 @@ var heroines = nano.db.use('heroines');
 // -----------------------------------------------------------------------------
 
 console.log('GET Heroines');
+
 app.get('/heroines', function(request, response) {
+    
         heroines.list(params, function(err,body) {
-           body.rows.forEach(function(doc) {      
-                    response.json(doc);
+         var docs = [];
+          
+           body.rows.forEach(function(doc) {
+               docs.push(doc);     
+
             });
+            response.json(docs);    
         });
+        
 });
 
 
@@ -56,3 +63,5 @@ app.get('/heroines', function(request, response) {
 var port = process.env.PORT || 9001;
 app.listen(port);
 console.log("App listening on port " + port);
+
+// hello

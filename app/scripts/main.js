@@ -8,7 +8,7 @@ angular.module('heroinesApp', [])
 }).then(function successCallback(response) {
        console.log(response.status, "GET Heroines: " + response.statusText);
        console.log(response.data);
-        $scope.profile = response.data.doc;
+        $scope.profile = response.data;
   }, function errorCallback(response) {
       console.error(response.status, response.statusText);
   });
