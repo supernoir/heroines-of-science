@@ -56,6 +56,7 @@
     }
   },
   "dependencies": {
+    "cradle": "^0.7.1",
     "nano": "^6.2.0"
   }
 }
