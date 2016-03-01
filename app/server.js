@@ -34,18 +34,20 @@ var nano = require('nano')('http://localhost:5984')
   ;
 var heroines = nano.db.use('heroines');
 
+
 // -----------------------------------------------------------------------------  
 //  REST
 // -----------------------------------------------------------------------------
 
 console.log('GET Heroines');
-app.get('/heroines', function(request, response, next) {
+app.get('/heroines', function(request, response) {
         heroines.list(params, function(err,body) {
-           body.rows.forEach(function(doc) {
+           body.rows.forEach(function(doc) {      
                     response.json(doc);
             });
         });
 });
+
 
 // -----------------------------------------------------------------------------  
 //  LISTENING

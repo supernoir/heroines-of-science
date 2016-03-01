@@ -27,7 +27,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    
+
     <div class="container" ng-controller="mainController">
       <div class="header">
         <ul class="nav nav-pills pull-right">
@@ -37,98 +37,66 @@
         <h3 class="text-muted">Heroines of Science</h3>
       </div>
 
-      <!--
-      <div class="jumbotron">
-        <h1>{{hello}}</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-      </div>
-      -->
       
       <div class="heroines_filter">
           <div class="row">
               <!--<p class="lead text-center">Female Noble Laureates <span class="text-muted">filtered by</span></p>-->
               <div class="col-md-3">
               <label class="control-label">Nation</label>
-              <select class="form-control">
+              <select class="form-control heroines_select">
                   <option ng-repeat="n in nations"><b>{{n}}</option>
               </select>
               </div>
               <div class="col-md-3">
               <label class="control-label">Year</label>
-              <select class="form-control">
+              <select class="form-control heroines_select">
                   <option ng-repeat="y in years"><b>{{y}}</option>
               </select>
               </div>
               <div class="col-md-3">
               <label class="control-label">Discipline</label>
-              <select class="form-control">
+              <select class="form-control heroines_select">
                   <option ng-repeat="d in disciplines"><b>{{d}}</option>
               </select>
               </div>
           </div>
       </div>
       
-      <div class="heroines_card">
+      <div class="heroines_card col-sm-4">
           <!-- PORTRAIT & NAME -->
           <div class="row">
-              <div class="col-md-6">
-                <img src="/images/portraits/portrait_maria-goeppert-mayer.jpg" class="portrait" alt="..." class="img-rounded">
-              </div>
-              <div class="col-md-6">
-                  <div class="fullname">
-                      <h1>{{yay.first_name}}<br><strong>{{yay.last_name}}</strong></h1>
-                  </div>
-                  <hr class="divider">
-                  
-                  <div class="col-md-6">
-                  <div class="desc">
-                      <p class="card-desc">{{card.desc}}</p>
-                  </div>
-              </div>
+              <div class="col-sm-12">
+                <img src="/images/portraits/portrait_maria-goeppert-mayer.jpg" class="portrait col-sm-12" alt="...">
               </div>
           </div>
-          
-          <hr class="divider">
-          
-          <!-- SPECS -->
-          <div class="row">              
-              <div class="col-md-4">
-                  <div class="nation">
-                      <h3>{{card.nation}}</h3>
-                  </div>
-              </div>
-              <div class="col-md-4">
-                  <div class="year">
-                      <h3>{{card.year}}</h3>
-                  </div>
-             </div>
-             <div class="col-md-4">
-                  <div class="discipline">
-                      <h3><span class="glyphicon glyphicon-apple"></span> {{card.discipline}}</h3>
-                  </div>
-             </div>
-          </div>
-          
-          <hr class="divider">
-          
-          <!-- DESC -->
           <div class="row">
-              <div class="col-md-6">
+              <div class="col-sm-12">
+                  <div class="fullname">
+                      <h4>{{card.first_name}}<br><strong>{{card.last_name}}</strong></h4>
+                  </div>
+              </div>
+          </div>
+          <div class="row">                  
+            <div class="col-sm-12">
                   <div class="desc">
                       <p class="card-desc">{{card.desc}}</p>
                   </div>
               </div>
+              </div>
+          <div class="row">
+             <div class="col-sm-12">
+                  <div class="award">
+                      <p><span class="glyphicon glyphicon-apple"></span> {{card.discipline}} | {{card.year}} | {{card.nation}}</p>
+                  </div>
+             </div>
           </div>
-          
-          <hr class="divider">
-          
-      </div>
+    </div>
+
 
       <div class="row marketing">
         <div class="col-lg-6">
           <h4><a href="https://html5boilerplate.com/">HTML5 Boilerplate</a></h4>
           <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-          
         </div>
       </div>
 

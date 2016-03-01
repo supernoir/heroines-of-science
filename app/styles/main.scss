@@ -98,6 +98,7 @@ body {
 /* Cards */
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 $physics: rgb(190,120,160);
+$peace: rgb(80,160,220);
 $filter: rgb(50,50,50);
 
 
@@ -114,77 +115,63 @@ $filter: rgb(50,50,50);
 
 .heroines_card {
     font-family: 'Noto Serif', 'Times New Roman', serif !important;
-    margin: 0;
-    padding: 30px;
+    margin: 0 10px 0 0;
+    padding: 10px;
     background-color: lighten($physics,20%);
     border-top: 1em solid $physics;
-}
-
-.nation {
-    background-color: lighten($physics, 30%);
-    padding: 10px;
-
-    
-    color: $physics;
-    text-align: center;
-    vertical-align: middle;
-    border-bottom: 0.25em solid $physics;    
-}
-
-.year {
-    background-color: lighten($physics, 10%);
-    padding: 10px;
+    display: inline;
+    }
 
 
-    
+.award {
+    background-color: lighten($physics,10%);
+    padding: 5px;
+
     color: #fff;
     text-align: center;
-    vertical-align: middle;
     border-bottom: 0.25em solid $physics;
-}
-
-.discipline {
-    background-color: #fff;
-    padding: 10px;
-
-    
-    color: $physics;
-    text-align: center;
-
-    border-bottom: 0.25em solid $physics;
+        display: block;
     
 }
 
 .fullname {
     background-color: #fff;
-    padding: 10px;
-
+    padding: 5px;
+    margin: 5px 0;
     border-bottom: 0.25em solid $physics;
     
     color: $physics;
     text-align: center;
-    vertical-align: bottom;
+        display: block;
+
 }
 
 .portrait {
-    background-color: #fff;
-    padding: 10px;
-    width: auto;
+    padding: 5px;
     border-bottom: 0.25em solid $physics;
+    background-color: #fff;
     }
 
 .desc {
-    background-color: #fff;
-    padding: 10px;
+    background-color: lighten($physics, 30%);
+    padding: 5px;
+    margin: 5px 0;
 
     border-bottom: 0.25em solid $physics;
     
     color: $physics;
     text-align: center;
-    vertical-align: bottom;
+        display: block;
+
 }
 
-.divider{
-    border-color: $physics;
-    
+
+.heroines_select {
+    border: 0.15em solid lighten($filter,50%);
+    background: none;
+    color: $filter;
+}
+
+.heroines_select:focus {
+    border: 0.15em solid lighten($filter,20%); 
 }
