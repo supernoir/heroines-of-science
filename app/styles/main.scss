@@ -4,7 +4,9 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import url(https://fonts.googleapis.com/css?family=Signika:400,700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+@import url(https://fonts.googleapis.com/css?family=Noto+Serif);
+
 
 
 .browsehappy {
@@ -95,28 +97,47 @@ body {
   }
 /*}*/
 
+
 /* Cards */
 
 $base-color: rgb(50,50,50);
+$primary: rgb(50,100,100);
+
 $physics: rgb(150,100,150);
 $literature: rgb(100,150,150);
 $peace: rgb(150,150,100);
-$chemistry: rgb(100,150,100);
+$chemistry: rgb(150,100,100);
 $economics: rgb(100,150,100);
 
+@import url(https://fonts.googleapis.com/css?family=Codystar);
 
+.heroines_logo {
+    font-family: 'Codystar', serif;
+    font-size: 1.75em;
+    margin: 0 5px 0 0;
+
+    color: $primary;
+}
+
+.heroines_tagline {
+    font-family: 'Noto Sans', sans;
+    font-size: 0.5em;
+    text-transform: uppercase;
+    color: rgb(200,200,200);
+    
+}
 
 .heroines_filter {
-    font-family: 'Arimo', 'Arial', sans-serif !important;
+    font-family: 'Noto Sans', 'Arial', sans-serif;
     margin: 0 0 20px 0;
     padding: 30px;
-    background-color: lighten($base-color,70%);
-    border-top: 1em solid lighten($base-color,50%);
+    background-color: lighten($base-color,75%);
+    border-top: 1em solid lighten($base-color,60%);
     color: $base-color;
 }
 
 .heroines_card {
-    font-family: 'Signika', 'Arial', sans-serif !important;
+    font-family: 'Noto Serif', 'Arial', sans-serif;
     margin: 5px;
     padding: 10px;
     display: inline;     
