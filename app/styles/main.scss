@@ -4,8 +4,8 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
-@import url(https://fonts.googleapis.com/css?family=Noto+Serif:400,700);
+@import url(https://fonts.googleapis.com/css?family=Signika:400,700);
+
 
 .browsehappy {
   margin: 0.2em 0;
@@ -70,11 +70,11 @@ body {
   }
 }
 
-/* Responsive: Portrait tablets and up */
+/* Responsive: Portrait tablets and up 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 740px;
-  }
+  }*/
 
   /* Remove the padding we set earlier */
   .header,
@@ -93,22 +93,21 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
-}
+/*}*/
 
 /* Cards */
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 
 $base-color: rgb(50,50,50);
 $physics: rgb(150,100,150);
-$literature: rgb(100,150,200);
-$peace: rgb(200,150,100);
-$chemistry: rgb(200,200,150);
+$literature: rgb(100,150,150);
+$peace: rgb(150,150,100);
+$chemistry: rgb(100,150,100);
 $economics: rgb(100,150,100);
 
 
 
 .heroines_filter {
-    font-family: 'Noto Sans', 'Times New Roman', serif !important;
+    font-family: 'Arimo', 'Arial', sans-serif !important;
     margin: 0 0 20px 0;
     padding: 30px;
     background-color: lighten($base-color,70%);
@@ -117,7 +116,7 @@ $economics: rgb(100,150,100);
 }
 
 .heroines_card {
-    font-family: 'Noto Serif', 'Times New Roman', serif !important;
+    font-family: 'Signika', 'Arial', sans-serif !important;
     margin: 5px;
     padding: 10px;
     display: inline;     
@@ -217,25 +216,25 @@ $economics: rgb(100,150,100);
 }
 
 .desc_Literature {
-    background-color: lighten($literature, 30%);
+    background-color: lighten($literature, 40%);
     border-bottom: 0.25em solid $literature;
     color: $literature;
 }
 
 .desc_Physics {
-    background-color: lighten($physics, 30%);
+    background-color: lighten($physics, 40%);
     border-bottom: 0.25em solid $physics;
     color: $physics;
 }
 
 .desc_Chemistry {
-    background-color: lighten($chemistry, 30%);
+    background-color: lighten($chemistry, 40%);
     border-bottom: 0.25em solid $chemistry;
     color: $chemistry;
 }
 
 .desc_Peace {
-    background-color: lighten($peace, 30%);
+    background-color: lighten($peace, 40%);
     border-bottom: 0.25em solid $peace;
     color: $peace;
 }
