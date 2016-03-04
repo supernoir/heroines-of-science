@@ -1,21 +1,24 @@
-<form>
+<form ng-submit="addHeroine()">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="first_name">First Name</label>
+    <input ng-model="first_name" type="text" class="form-control" id="first_name" placeholder="Marie">
   </div>
   <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
+    <label for="last_name">Last Name</label>
+    <input ng-model="last_name" type="text" class="form-control" id="last_name" placeholder="Curie">
   </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
+  <div class="form-group">
+    <label for="nation">Nation</label>
+    <input ng-model="nation" type="text" class="form-control" id="nation" placeholder="France">
   </div>
+  <div class="form-group">
+    <label for="discipline">Discipline</label>
+    <input ng-model="discipline" type="text" class="form-control" id="discipline" placeholder="Chemistry">
+  </div>  
+  <div class="form-group">
+    <label for="Year">Year</label>
+    <input ng-model="year" type="text" class="form-control" id="year" placeholder="1905">
+  </div>  
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
+<br>

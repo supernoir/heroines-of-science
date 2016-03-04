@@ -66,4 +66,18 @@ heroinesApp.controller('mainController', ['$scope','$http','$location', function
     'option_6': 'Medicine'
   };
   
+
+$scope.addHeroine = function () {
+    var data = $scope.heroine;  
+    $http.post('http://localhost:9001/add_heroine', data).
+        success(function(data) {
+            console.log("Successfully added Heroine");
+        }).error(function(data) {
+            console.error("Error in adding Heroine");
+        })
+    $location.path('/');
+}  
+
+
+  
 }]);

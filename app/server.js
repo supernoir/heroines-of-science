@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
 app.use(function (request, response, next) {
     response.header("Access-Control-Allow-Origin", "*");
     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    response.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");  
+    response.header("Access-Control-Allow-Methods", "POST, GET");  
   next();     
 });
 
@@ -48,11 +48,16 @@ app.get('/heroines', function(request, response) {
           
            body.rows.forEach(function(doc) {
                docs.push(doc);     
-
             });
             response.json(docs);    
-        });
-        
+        });  
+});
+
+console.log('POST add Heroine');
+
+app.post('/add_heroine', function(request,response) {
+   //console.log(request.body);
+   console.log(response.body); 
 });
 
 
