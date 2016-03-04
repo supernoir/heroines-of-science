@@ -1,6 +1,26 @@
-angular.module('heroinesApp', [])
+var heroinesApp = angular.module('heroinesApp', ['ngRoute']);
 
-.controller('mainController', ['$scope','$http','$location', function($scope, $http, $location) {
+heroinesApp.config(function($locationProvider, $routeProvider, $httpProvider) {
+        $routeProvider
+
+            .when('/', {
+                templateUrl : 'views/home.html',
+                controller  : 'mainController'
+            })
+            .when('/about', {
+                templateUrl : 'views/about.html',
+                controller  : 'mainController'
+            })
+            .when('/add_heroine', {
+                templateUrl : 'views/add_heroine.html',
+                controller  : 'mainController'
+ 
+            });
+            $locationProvider.html5Mode(false);
+    });
+
+
+heroinesApp.controller('mainController', ['$scope','$http','$location', function($scope, $http, $location) {
 
   $http({
   method: 'GET',
@@ -12,8 +32,6 @@ angular.module('heroinesApp', [])
   }, function errorCallback(response) {
       console.error(response.status, response.statusText);
   });
-
-  $scope.hello = "Hello World!";
   
   $scope.card = {
       'first_name':'Maria',

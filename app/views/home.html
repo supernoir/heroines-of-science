@@ -1,0 +1,56 @@
+      <div class="heroines_filter">
+          <div class="row">
+              <!--<p class="lead text-center">Female Noble Laureates <span class="text-muted">filtered by</span></p>-->
+              <div class="col-md-3">
+              <label class="control-label">Nation</label>
+              <select class="form-control heroines_select">
+                  <option ng-repeat="n in nations"><b>{{n}}</option>
+              </select>
+              </div>
+              <div class="col-md-3">
+              <label class="control-label">Year</label>
+              <select class="form-control heroines_select">
+                  <option ng-repeat="y in years"><b>{{y}}</option>
+              </select>
+              </div>
+              <div class="col-md-3">
+              <label class="control-label">Discipline</label>
+              <select class="form-control heroines_select">
+                  <option ng-repeat="d in disciplines"><b>{{d}}</option>
+              </select>
+              </div>
+          </div>
+      </div>
+      
+<div class="container">
+      
+      <div class="heroines_card card_{{p.doc.discipline}} col-sm-3" ng-repeat="p in profile">
+          <!-- PORTRAIT & NAME -->
+          <div class="row">
+              <div class="col-sm-12">
+                <img src="/images/portraits/portrait_{{p.doc.name}}.jpg" class="portrait col-sm-12" alt="...">
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="fullname fullname_{{p.doc.discipline}}">
+                      <h4>{{p.doc.first_name}} <strong>{{p.doc.last_name}}</strong></h4>
+                  </div>
+              </div>
+          </div>
+          <div class="row">                  
+            <div class="col-sm-12">
+                  <div class="desc desc_{{p.doc.discipline}}">
+                      <p class="card-desc">{{p.doc.desc}}</p>
+                  </div>
+              </div>
+              </div>
+          <div class="row">
+             <div class="col-sm-12">
+                  <div class="award award_{{p.doc.discipline}}">
+                      <p>{{p.doc.discipline}} | {{p.doc.year}} | {{p.doc.nation}}</p>
+                  </div>
+             </div>
+          </div>
+    </div>    
+</div>
