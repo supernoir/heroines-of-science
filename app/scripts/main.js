@@ -67,7 +67,7 @@ heroinesApp.controller('mainController', ['$scope','$http','$location', function
   };
   
 
-$scope.addHeroine = function () {
+$scope.addHeroine = function() {
     var data = $scope.heroine;  
     $http.post('http://localhost:9001/add_heroine', data).
         success(function(data) {

@@ -56,7 +56,7 @@ app.get('/heroines', function(request, response) {
 console.log('POST add Heroine');
 
 app.post('/add_heroine', function(request,response) {
-   //console.log(request.body);
+
    console.log(response.body); 
 });
 

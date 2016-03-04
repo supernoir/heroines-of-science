@@ -108,6 +108,7 @@ $literature: rgb(100,150,150);
 $peace: rgb(150,150,100);
 $chemistry: rgb(150,100,100);
 $economics: rgb(100,150,100);
+$medicine: rgb(50,100,150);
 
 @import url(https://fonts.googleapis.com/css?family=Codystar);
 
@@ -163,6 +164,17 @@ $economics: rgb(100,150,100);
     border-top: 1em solid $peace;  
  }   
 
+ .card_Economics {
+    background-color: lighten($economics,20%);
+    border-top: 1em solid $economics;  
+ }   
+
+ .card_Medicine {
+    background-color: lighten($medicine,20%);
+    border-top: 1em solid $medicine;  
+ }   
+
+
 .award {
     padding: 5px;
     margin: 5px 0;
@@ -189,6 +201,16 @@ $economics: rgb(100,150,100);
 .award_Physics {
     background-color: lighten($physics,10%);
     border-bottom: 0.25em solid $physics;
+}
+
+.award_Medicine {
+    background-color: lighten($medicine,10%);
+    border-bottom: 0.25em solid $medicine;
+}
+
+.award_Economics {
+    background-color: lighten($economics,10%);
+    border-bottom: 0.25em solid $economics;
 }
 
 .fullname {
@@ -222,6 +244,18 @@ $economics: rgb(100,150,100);
     color: $peace;
 }
 
+.fullname_Medicine {
+    background-color: #fff;
+    border-bottom: 0.25em solid $medicine;
+    color: $medicine;
+}
+
+.fullname_Economics {
+    background-color: #fff;
+    border-bottom: 0.25em solid $economics;
+    color: $economics;
+}
+
 .portrait {
     padding: 5px;
     margin: 5px 0;
@@ -252,6 +286,18 @@ $economics: rgb(100,150,100);
     background-color: lighten($chemistry, 40%);
     border-bottom: 0.25em solid $chemistry;
     color: $chemistry;
+}
+
+.desc_Economics {
+    background-color: lighten($economics, 40%);
+    border-bottom: 0.25em solid $economics;
+    color: $economics;
+}
+
+.desc_Medicine {
+    background-color: lighten($medicine, 40%);
+    border-bottom: 0.25em solid $medicine;
+    color: $medicine;
 }
 
 .desc_Peace {
