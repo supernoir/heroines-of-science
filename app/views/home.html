@@ -3,19 +3,19 @@
               <div class="col-md-3">
               <label class="control-label">Nation</label>
               <select class="form-control heroines_select">
-                  <option ng-repeat="n in nations"><b>{{n}}</option>
+                  <option ng-repeat="p in profile"><b>{{p.doc.nation}}</option>
               </select>
               </div>
               <div class="col-md-3">
               <label class="control-label">Year</label>
               <select class="form-control heroines_select">
-                  <option ng-repeat="y in years"><b>{{y}}</option>
+                  <option ng-repeat="p in profile"><b>{{p.doc.year}}</option>
               </select>
               </div>
               <div class="col-md-3">
               <label class="control-label">Discipline</label>
               <select class="form-control heroines_select">
-                  <option ng-repeat="d in disciplines"><b>{{d}}</option>
+                  <option ng-repeat="p in profile"><b>{{p.doc.discipline}}</option>
               </select>
               </div>
           </div>

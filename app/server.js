@@ -57,6 +57,11 @@ console.log('POST add Heroine');
 
 app.post('/add_heroine', function(request,response) {
 
+    heroines.insert(params, function(err, body) {
+  if (!err)
+    console.log(body);
+})
+
    console.log(response.body); 
 });
 
