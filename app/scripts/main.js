@@ -42,6 +42,7 @@ heroinesApp.controller('mainController', ['$scope','$http','$location', function
       'desc':'The Fox jumps over the Nobel Laureate and he turns green.',      
   };
 
+
   $scope.nations = {
     'option_1': 'USA',
     'option_2': 'Germany',

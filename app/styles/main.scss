@@ -116,7 +116,6 @@ $medicine: rgb(50,100,150);
     font-family: 'Codystar', serif;
     font-size: 1.75em;
     margin: 0 5px 0 0;
-
     color: $primary;
 }
 
@@ -125,7 +124,6 @@ $medicine: rgb(50,100,150);
     font-size: 0.5em;
     text-transform: uppercase;
     color: rgb(200,200,200);
-    
 }
 
 .heroines_filter {
@@ -315,4 +313,3 @@ $medicine: rgb(50,100,150);
 .heroines_select:focus {
     border: 0.15em solid lighten($base-color,20%); 
 }
-
