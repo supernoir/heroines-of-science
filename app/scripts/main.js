@@ -69,14 +69,15 @@ heroinesApp.controller('mainController', ['$scope','$http','$location', function
   
 
 $scope.addHeroine = function() {
-    var data = $scope.heroine;  
+    var data = $scope.heroine;
+    console.log(data); 
     $http.post('http://localhost:9001/add_heroine', data).
         success(function(data) {
             console.log("Successfully added Heroine");
         }).error(function(data) {
             console.error("Error in adding Heroine");
         })
-    $location.path('/');
+    $location.path('/add_heroine');
 }  
 
 
