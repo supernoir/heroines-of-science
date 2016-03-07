@@ -129,23 +129,35 @@ $medicine: rgb(50,100,150);
 .heroines_filter {
     font-family: 'Noto Sans', 'Arial', sans-serif;
     margin: 0 0 20px 0;
-    padding: 30px;
+    padding: 20px;
     background-color: lighten($base-color,75%);
     border-top: 1em solid lighten($base-color,60%);
     color: $base-color;
-    text-align: center;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.heroines_filter_item {
+    flex-basis: 240px;
+    margin: 10px;
+    flex-grow: 1;
 }
 
 .heroines_stack {
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .heroines_card {
     font-family: 'Noto Serif', 'Arial', sans-serif;
     margin: 5px;
     padding: 10px;
-    display: inline;     
+    display: inline;
+    // width: 240px;
+    flex-basis: 240px;
     }
 
  .card_Literature{
@@ -310,10 +322,15 @@ $medicine: rgb(50,100,150);
     color: $peace;
 }
 
+
 .heroines_select {
     border: 0.15em solid lighten($base-color,50%);
     background: none;
     color: $base-color;
+    width: 180px;
+
+    display: block;
+
 }
 
 .heroines_select:focus {
