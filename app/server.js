@@ -56,12 +56,11 @@ app.get('/heroines', function(request, response) {
 console.log('POST add Heroine');
 
 app.post('/add_heroine', function(request,response) {
-
-    heroines.insert(params, function(err, body) {
+    var doc = request.body;
+   heroines.insert(params, function(err, doc) {
   if (!err)
     console.log(body);
 })
-
    console.log(response.body); 
 });
 

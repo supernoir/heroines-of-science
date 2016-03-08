@@ -1,24 +1,28 @@
 <form ng-submit="addHeroine()">
   <div class="form-group">
     <label for="first_name">First Name</label>
-    <input ng-model="first_name" type="text" class="form-control" id="first_name" placeholder="Marie">
+    <input ng-model="heroine.first_name" ng-bind="firstname" type="text" class="form-control" id="first_name" placeholder="Marie">
   </div>
   <div class="form-group">
     <label for="last_name">Last Name</label>
-    <input ng-model="last_name" type="text" class="form-control" id="last_name" placeholder="Curie">
+    <input ng-model="heroine.last_name" ng-bind="lastname" type="text" class="form-control" id="last_name" placeholder="Curie">
   </div>
   <div class="form-group">
     <label for="nation">Nation</label>
-    <input ng-model="nation" type="text" class="form-control" id="nation" placeholder="France">
+    <input ng-model="heroine.nation" ng-bind="nation" type="text" class="form-control" id="nation" placeholder="France">
   </div>
   <div class="form-group">
     <label for="discipline">Discipline</label>
-    <input ng-model="discipline" type="text" class="form-control" id="discipline" placeholder="Chemistry">
+    <input ng-model="heroine.discipline" ng-bind="discipline" type="text" class="form-control" id="discipline" placeholder="Chemistry">
   </div>  
   <div class="form-group">
     <label for="Year">Year</label>
-    <input ng-model="year" type="text" class="form-control" id="year" placeholder="1905">
+    <input ng-model="heroine.year" ng-bind="year" type="text" class="form-control" id="year" placeholder="1905">
   </div>  
+  <div class="form-group">
+    <label for="Description">Description</label>
+    <textarea ng-model="heroine.desc" ng-bind="desc" type="text" class="form-control" id="description" placeholder="In recognition of her services to the advancement of chemistry by the discovery of the elements radium and polonium, by the isolation of radium and the study of the nature and compounds of this remarkable element"></textarea>
+  </div>
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
 <br>
