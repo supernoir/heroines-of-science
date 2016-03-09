@@ -5,5 +5,3 @@
 It is written in JavaScript, with CouchDB serving content, node/express as the api and angular/jquery/bootstrap in the frontend.
 
 ![Screenshot of Current Progress](screenshots/screenshot_mar-2-16.png)
-
-[![Throughput Graph](https://graphs.waffle.io/waffleio/waffle.io/throughput.svg)](https://waffle.io/waffleio/waffle.io/metrics)
