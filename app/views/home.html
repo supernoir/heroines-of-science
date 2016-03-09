@@ -33,7 +33,7 @@
           <div class="row">
               <div class="col-sm-12">
                   <div class="fullname fullname_{{p.doc.discipline}}">
-                      <h4>{{p.doc.first_name}} <strong>{{p.doc.last_name}}</strong></h4>
+                      <h4>{{p.doc.first_name}}<br><strong>{{p.doc.last_name}}</strong></h4>
                   </div>
               </div>
           </div>
@@ -47,8 +47,14 @@
           <div class="row">
              <div class="col-sm-12">
                   <div class="award award_{{p.doc.discipline}}">
-                      <p>{{p.doc.discipline}} | {{p.doc.year}} | {{p.doc.nation}}</p>
+                      <p><span class="label_{{p.doc.discipline}}">Year</span> {{p.doc.year}}</p>
                   </div>
+                  <div class="award award_{{p.doc.discipline}}">
+                      <p><span class="label_{{p.doc.discipline}}">Nation</span> {{p.doc.nation}}</p>
+                  </div>
+                  <div class="award award_{{p.doc.discipline}}">
+                      <p><span class="label_{{p.doc.discipline}}">Discipline</span> {{p.doc.discipline}}</p>
+                  </div>                  
              </div>
           </div>
     </div>    

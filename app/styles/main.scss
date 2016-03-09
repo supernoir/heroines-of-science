@@ -192,41 +192,53 @@ $medicine: rgb(50,100,150);
 
 
 .award {
-    padding: 5px;
+    display: flex;
+    padding: 10px 0 0 0;
     margin: 5px 0;
     color: #fff;
-    text-align: center;
-    display: block; 
+    font-family: "Noto Sans", "Arial", sans-serif; 
 }
 
 .award_Literature {
     background-color: lighten($literature,10%);
     border-bottom: 0.25em solid $literature;
+    flex-direction: column;
+    align-items: center;    
 }
 
 .award_Peace {
     background-color: lighten($peace,10%);
     border-bottom: 0.25em solid $peace;
+    flex-direction: column;
+    align-items: center;
 }
 
 .award_Chemistry {
     background-color: lighten($chemistry,10%);
     border-bottom: 0.25em solid $chemistry;
+    flex-direction: column;
+    align-items: center;
 }
 
 .award_Physics {
     background-color: lighten($physics,10%);
     border-bottom: 0.25em solid $physics;
+    flex-direction: column;
+    align-items: center;
 }
 
 .award_Medicine {
     background-color: lighten($medicine,10%);
     border-bottom: 0.25em solid $medicine;
+    flex-direction: column;
+    align-items: center;
 }
 
 .award_Economics {
     background-color: lighten($economics,10%);
     border-bottom: 0.25em solid $economics;
+    flex-direction: column;
+    align-items: center;
 }
 
 .fullname {
@@ -281,7 +293,7 @@ $medicine: rgb(50,100,150);
 .desc {
     padding: 10px;
     margin: 5px 0;
-    height: 150px;
+    height: 240px;
     text-align: left;
     display: block;
 }
@@ -333,4 +345,28 @@ $medicine: rgb(50,100,150);
 
 .heroines_select:focus {
     border: 0.15em solid lighten($base-color,20%); 
+}
+
+.label_Literature {
+    color: lighten($literature, 30%);
+}
+
+.label_Economics {
+    color: lighten($economics, 30%);
+}
+
+.label_Physics {
+    color: lighten($physics, 30%);
+}
+
+.label_Chemistry {
+    color: lighten($chemistry, 30%);
+}
+
+.label_Peace {
+    color: lighten($peace, 30%);
+}
+
+.label_Medicine {
+    color: lighten($medicine, 30%);
 }
