@@ -2,20 +2,20 @@
           <div class="row">
               <div class="col-md-3 heroines_filter_item">
               <label class="control-label">Nation <b>{{selectNation.doc.nation}}</b></label>
-              <select class="form-control heroines_select" ng-model="selectNation" ng-options="p.doc.nation for p in profile">
-                <option value="">All Nations</option>
+              <select class="form-control heroines_select" ng-model="selectNation" ng-options="p.doc.nation for p in profile.persons">
+                <option value="profile">All Nations</option>
               </select>
               </div>
               <div class="col-md-3 heroines_filter_item">
               <label class="control-label">Year <b>{{selectYear.doc.year}}</b></label>
-              <select class="form-control heroines_select" ng-model="selectYear" ng-options="p.doc.year for p in profile">
+              <select class="form-control heroines_select" ng-model="selectYear" ng-options="p.doc.year for p in profile.persons">
                   <option value="">All Years</option>
               </select>
               </div>
               <div class="col-md-3 heroines_filter_item">
               <label class="control-label">Discipline <b>{{selectDiscipline.doc.discipline}}</b></label>
-              <select class="form-control heroines_select" ng-model="selectDiscipline" ng-options="p.doc.discipline for p in profile">
-                  <option value="">All Disciplines</option>
+              <select class="form-control heroines_select" ng-model="disciplines_model" ng-options="d.discipline for d in disciplines">
+                  <option ng-value="profile">All Disciplines</option>
               </select>
               </div>
           </div>
@@ -23,7 +23,7 @@
       
 <div class="container heroines_stack">
       
-      <div class="heroines_card card_{{p.doc.discipline}} col-sm-3" ng-repeat="p in profile">
+      <div class="heroines_card card_{{p.doc.discipline}} col-sm-3" ng-repeat="p in disciplines_model.persons">
           <!-- PORTRAIT & NAME -->
           <div class="row">
               <div class="col-sm-12">
