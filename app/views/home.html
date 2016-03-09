@@ -1,21 +1,21 @@
       <div class="heroines_filter">
           <div class="row">
               <div class="col-md-3 heroines_filter_item">
-              <label class="control-label">Nation <b>{{selectNation.doc.nation}}</b></label>
-              <select class="form-control heroines_select" ng-model="selectNation" ng-options="p.doc.nation for p in profile.persons">
-                <option value="profile">All Nations</option>
+              <label class="control-label">Nation</label>
+              <select class="form-control heroines_select" ng-model="nations_model" ng-options="n.nation for n in nations">
+                <option value="">All Nations</option>
               </select>
               </div>
               <div class="col-md-3 heroines_filter_item">
-              <label class="control-label">Year <b>{{selectYear.doc.year}}</b></label>
-              <select class="form-control heroines_select" ng-model="selectYear" ng-options="p.doc.year for p in profile.persons">
+              <label class="control-label">Year</label>
+              <select class="form-control heroines_select" ng-model="years_model" ng-options="y.year for y in years">
                   <option value="">All Years</option>
               </select>
               </div>
               <div class="col-md-3 heroines_filter_item">
-              <label class="control-label">Discipline <b>{{selectDiscipline.doc.discipline}}</b></label>
+              <label class="control-label">Discipline</label>
               <select class="form-control heroines_select" ng-model="disciplines_model" ng-options="d.discipline for d in disciplines">
-                  <option ng-value="profile">All Disciplines</option>
+                  <option value="">All Disciplines</option>
               </select>
               </div>
           </div>
@@ -23,7 +23,7 @@
       
 <div class="container heroines_stack">
       
-      <div class="heroines_card card_{{p.doc.discipline}} col-sm-3" ng-repeat="p in disciplines_model.persons">
+      <div class="heroines_card card_{{p.doc.discipline}} col-sm-3" ng-repeat="p in years_model.persons">
           <!-- PORTRAIT & NAME -->
           <div class="row">
               <div class="col-sm-12">
