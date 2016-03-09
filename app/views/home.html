@@ -1,21 +1,21 @@
       <div class="heroines_filter">
           <div class="row">
               <div class="col-md-3 heroines_filter_item">
-              <label class="control-label">Nation</label>
-              <select class="form-control heroines_select">
-                  <option ng-repeat="p in profile">{{p.doc.nation}}</option>
+              <label class="control-label">Nation <b>{{selectNation.doc.nation}}</b></label>
+              <select class="form-control heroines_select" ng-model="selectNation" ng-options="p.doc.nation for p in profile">
+                <option value="">All Nations</option>
               </select>
               </div>
               <div class="col-md-3 heroines_filter_item">
-              <label class="control-label">Year</label>
-              <select class="form-control heroines_select">
-                  <option ng-repeat="p in profile">{{p.doc.year}}</option>
+              <label class="control-label">Year <b>{{selectYear.doc.year}}</b></label>
+              <select class="form-control heroines_select" ng-model="selectYear" ng-options="p.doc.year for p in profile">
+                  <option value="">All Years</option>
               </select>
               </div>
               <div class="col-md-3 heroines_filter_item">
-              <label class="control-label">Discipline</label>
-              <select class="form-control heroines_select">
-                  <option ng-repeat="p in profile">{{p.doc.discipline}}</option>
+              <label class="control-label">Discipline <b>{{selectDiscipline.doc.discipline}}</b></label>
+              <select class="form-control heroines_select" ng-model="selectDiscipline" ng-options="p.doc.discipline for p in profile">
+                  <option value="">All Disciplines</option>
               </select>
               </div>
           </div>

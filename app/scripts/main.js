@@ -22,6 +22,11 @@ heroinesApp.config(function($locationProvider, $routeProvider, $httpProvider) {
 
 heroinesApp.controller('mainController', ['$scope','$http','$location', function($scope, $http, $location) {
 
+var nation = $scope.nation
+$scope.selectNation = function() {
+    console.log("It does something " + nation);
+}
+
   $http({
   method: 'GET',
   url: 'http://localhost:9001/heroines'
