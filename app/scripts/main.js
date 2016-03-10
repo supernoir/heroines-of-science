@@ -22,7 +22,9 @@ heroinesApp.config(function($locationProvider, $routeProvider, $httpProvider) {
 
 heroinesApp.controller('mainController', ['$scope','$http','$location', function($scope, $http, $location) {
 
-
+$scope.selectedMode = function(a) {
+   console.log(a + " has been selected");  
+};
 
 $scope.selectDiscipline = function(persons) {
     console.log(persons);

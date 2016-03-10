@@ -14,7 +14,7 @@
               </div>
               <div class="col-md-3 heroines_filter_item">
               <label class="control-label">Discipline</label>
-              <select class="form-control heroines_select" ng-model="disciplines_model" ng-options="d.discipline for d in disciplines">
+              <select class="form-control heroines_select" ng-model="disciplines_model" ng-options="d.discipline for d in disciplines" ng-change="selectedMode(d.discipline)">
                   <option value="">All Disciplines</option>
               </select>
               </div>
@@ -23,7 +23,7 @@
       
 <div class="container heroines_stack">
       
-      <div class="heroines_card card_{{p.doc.discipline}} col-sm-3" ng-repeat="p in years_model.persons">
+      <div class="heroines_card card_{{p.doc.discipline}} col-sm-3" ng-repeat="p in nations_model.persons">
           <!-- PORTRAIT & NAME -->
           <div class="row">
               <div class="col-sm-12">
