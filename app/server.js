@@ -45,13 +45,14 @@ app.get('/heroines', function(request, response) {
     
         heroines.list(params, function(err,body) {
          var docs = [];
-          
            body.rows.forEach(function(doc) {
-               docs.push(doc);     
+               docs.push(doc);
             });
-            response.json(docs);    
+            response.json(docs);
         });  
 });
+
+
 
 console.log('POST add Heroine');
 
